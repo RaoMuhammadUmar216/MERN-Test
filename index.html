@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<input>
+<h1>Counter Component</h1>
+<button id="increment">+</button>
+<span id="number">0</span>
+<button id="decrement">-</button>
+</div>
+
+
+<h1>Multiplier Component</h1>
+<span id="multiplier">1</span>
+<button id="multiply">multiply with -5</button>
+
+
+<h1>Subtrack Component</h1>
+<span id="subtracted">1</span>
+<button id="Substract">Substrack with 4</button>
+
+
+<h1>Divide Component</h1>
+<span id="divided">0</span>
+<button id="divide">Divide 21 by counter</button>
+
+
+<script>
+
+    // INCREMENT / DECREMENT
+    let incre = document.getElementById("increment");
+    let dec = document.getElementById("decrement");
+    let count = 0
+
+    let increFunction = incre.addEventListener("click", () => {
+        count += 1
+        document.getElementById("number").innerText = count;
+    });
+
+    let decFunction = dec.addEventListener("click", () => {
+        count -= 1
+        document.getElementById("number").innerText = count;
+    });
+
+    // Multiplier
+    let buttonX = document.getElementById("multiply");
+    let multiplier = document.getElementById("multiplier").innerText;
+    let number = -5;
+    let multiplierFunction = buttonX.addEventListener("click", () => {
+
+        let result = number * document.getElementById("number").innerText;
+
+        document.getElementById("multiplier").innerText = result;
+
+
+    });
+
+    // Subtrack
+    let buttonSub = document.getElementById("Substract");
+    let subtracted = document.getElementById("subtracted").innerText;
+    let subtractnumber = 4;
+    let subtractFunction = buttonSub.addEventListener("click", () => {
+
+        let result = subtractnumber - document.getElementById("number").innerText;
+
+        document.getElementById("subtracted").innerText = result;
+    });
+
+
+    // Divider
+    let buttondivide = document.getElementById("divide");
+    let divided = document.getElementById("divided").innerText;
+    let divideWithNumber = 21;
+    let divideFunction = buttondivide.addEventListener("click", () => {
+        let result = divideWithNumber / count
+
+        document.getElementById("divided").innerText = result;
+    });
+
+</script>
+</body>
+
+</html>
